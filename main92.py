@@ -1,4 +1,4 @@
-#Array data sturctures
+#data structures(array)
 import array
 
 #List
