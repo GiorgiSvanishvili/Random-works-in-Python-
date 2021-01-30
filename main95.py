@@ -92,6 +92,43 @@ for item in repeater:
     print(item)
 
 
+#Generators
+#With generators it is much more easier to iterate. It costs you less lines of code.
+def repeater(value):
+    while True:
+        yield value
+
+iterator = repeater('Hi')
+print(next(iterator))
+print(next(iterator))
+
+
+def repeat_three_times(value):
+    yield value
+    yield value
+    yield value
+
+for x in repeat_three_times('Hey'):
+    print(x)
+
+
+def bounded_repeater(value, max_repeats):
+    count = 0
+    while True:
+        if count >= max_repeats:
+            return
+        count +=1
+        yield value
+
+for x in bounded_repeater('Good Morning', 2):
+    print(x)
+
+
+
+
+
+
+
 
 
 
